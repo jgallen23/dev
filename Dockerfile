@@ -6,4 +6,4 @@ RUN curl https://deb.nodesource.com/setup > /tmp/node && bash /tmp/node && apt-g
 
 RUN curl https://get.docker.com/ > /tmp/docker && bash /tmp/docker
 
-
+RUN locale-gen en_US.UTF-8
