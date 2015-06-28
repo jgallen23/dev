@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#install aufs
+apt-get update && apt-get install -y linux-image-extra-$(uname -r)
+
+#install docker
+curl -sSL https://get.docker.io/ubuntu/ | sudo sh
+
+#start envy
+docker run -d --name envy -v /mnt/data:/data -v /var/run/docker.sock:/var/run/docker.sock -p 80:80 -p 2201:22 -e HOST_DATA=/mnt/data progrium/envy

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#VERSION=1
+if [[ ! -d /root/dotfiles ]]; then
+  cd /root
+  git clone https://github.com/jgallen23/dotfiles.git
+  . dotfiles/bin/dotfiles
+
+  if [[ -f /root/.bashrc ]]; then
+    echo "source /root/.bash_profile" >> /root/.bashrc
+  fi
+fi
