@@ -19,6 +19,9 @@ RUN curl https://deb.nodesource.com/setup > /tmp/node && bash /tmp/node && apt-g
 RUN curl https://get.docker.com/ > /tmp/docker && bash /tmp/docker
 
 RUN locale-gen en_US.UTF-8
+ENV LC_ALL en_US.utf-8
+
+RUN echo America/Los_Angeles | sudo tee /etc/timezone && sudo dpkg-reconfigure --frontend noninteractive tzdata
 
 #global node libs
 RUN npm install -g david grunt-cli bower jscs jshint
