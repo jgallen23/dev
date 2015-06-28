@@ -24,7 +24,5 @@ RUN locale-gen en_US.UTF-8
 RUN npm install -g david grunt-cli bower jscs jshint
 
 #dotfiles
-ADD dotfiles-setup /setup
-
-RUN ./setup
+ADD dotfiles-setup /dotfiles-setup
 

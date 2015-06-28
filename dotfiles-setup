@@ -9,4 +9,11 @@ if [[ ! -d /root/dotfiles ]]; then
   if [[ -f /root/.bashrc ]]; then
     echo "source /root/.bash_profile" >> /root/.bashrc
   fi
+
+  bash dotfiles/vim-install.sh
+
+  ssh-keygen -f /root/.ssh/id_rsa -t rsa -N ''
+
+  echo "Add this to github"
+  cat /root/.ssh/id_rsa.pub
 fi
