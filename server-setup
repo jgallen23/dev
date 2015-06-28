@@ -8,3 +8,6 @@ curl -sSL https://get.docker.io/ubuntu/ | sudo sh
 
 #start envy
 docker run -d --name envy -v /mnt/data:/data -v /var/run/docker.sock:/var/run/docker.sock -p 80:80 -p 2201:22 -e HOST_DATA=/mnt/data progrium/envy
+
+#set timezone
+sudo timedatectl set-timezone America/Los_Angeles
