@@ -2,7 +2,17 @@ from ubuntu
 
 #CORE
 RUN apt-get update && \
-  apt-get install -y git htop wget curl software-properties-common mongodb unzip python make
+  apt-get install -y \
+    git \
+    htop \
+    wget \
+    curl \
+    software-properties-common \
+    mongodb \
+    unzip \
+    python \
+    make \
+    python-pip
 
 #VIM
 RUN add-apt-repository ppa:fcwu-tw/ppa && \
@@ -38,6 +48,9 @@ RUN npm install -g david grunt-cli bower jscs jshint
 
 #update npm
 RUN npm update -g npm
+
+#aws
+RUN pip install awscli && pip install awsebcli
 
 EXPOSE 8080
 
