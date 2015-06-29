@@ -10,7 +10,7 @@ if [[ ! -d /root/dotfiles ]]; then
     echo "source /root/.bash_profile" >> /root/.bashrc
   fi
 
-  bash dotfiles/vim-install.sh
+  bash /root/dotfiles/vim-install.sh
 
   ssh-keygen -f /root/.ssh/id_rsa -t rsa -N ''
 
