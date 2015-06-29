@@ -36,6 +36,9 @@ RUN cd /tmp && \
 #global node libs
 RUN npm install -g david grunt-cli bower jscs jshint
 
+#update npm
+RUN npm update -g npm
+
 #dotfiles
 ADD dotfiles-setup /dotfiles-setup
 
