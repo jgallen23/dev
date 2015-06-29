@@ -39,6 +39,8 @@ RUN npm install -g david grunt-cli bower jscs jshint
 #update npm
 RUN npm update -g npm
 
+EXPOSE 8080
+
 #dotfiles
 ADD dotfiles-setup /dotfiles-setup
 
