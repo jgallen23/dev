@@ -2,7 +2,7 @@ from ubuntu
 
 #CORE
 RUN apt-get update && \
-  apt-get install -y git htop wget curl software-properties-common mongodb unzip python
+  apt-get install -y git htop wget curl software-properties-common mongodb unzip python make
 
 #VIM
 RUN add-apt-repository ppa:fcwu-tw/ppa && \
