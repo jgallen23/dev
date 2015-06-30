@@ -12,7 +12,8 @@ RUN apt-get update && \
     unzip \
     python \
     make \
-    python-pip
+    python-pip \
+    exuberant-ctags
 
 #VIM
 RUN add-apt-repository ppa:fcwu-tw/ppa && \
