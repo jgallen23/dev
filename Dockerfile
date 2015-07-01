@@ -45,7 +45,7 @@ RUN cd /tmp && \
   mv ngrok /usr/local/bin/
 
 #global node libs
-RUN npm install -g david grunt-cli bower jscs jshint
+RUN npm install -g david grunt-cli bower jscs jshint nodemon
 
 #update npm
 RUN npm update -g npm
