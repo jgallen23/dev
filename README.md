@@ -3,5 +3,5 @@
 ## Install
 
 ```
-curl https://raw.githubusercontent.com/jgallen23/dev/master/server-setup | sudo bash
+curl -sSL https://raw.githubusercontent.com/jgallen23/dev/master/server-setup | sudo sh
 ```
