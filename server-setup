@@ -11,12 +11,14 @@ service ssh restart
 curl -sSL https://get.docker.io/ubuntu/ | sudo sh
 
 #load my fork of envy
+mkdir /code
+cd /code
 git clone https://github.com/jgallen23/envy.git
 cd envy
 docker build -t jgallen23/envy .
 
 #start envy
-docker run -d --name envy --net host -v /mnt/data:/data -v /var/run/docker.sock:/var/run/docker.sock -p 80:80 -p 2201:22 -e HOST_DATA=/mnt/data jgallen23/envy
+docker run -d --name envy --net host -v /mnt/data:/data -v /var/run/docker.sock:/var/run/docker.sock -e HOST_DATA=/mnt/data jgallen23/envy
 
 #set timezone
 sudo timedatectl set-timezone America/Los_Angeles
