@@ -3,6 +3,10 @@
 #install aufs
 apt-get update && apt-get install -y git htop linux-image-extra-$(uname -r)
 
+#update ssh port to 2201
+sed -i 's/Port 22/Port 2201/' /etc/ssh/sshd_config
+service ssh restart
+
 #install docker
 curl -sSL https://get.docker.io/ubuntu/ | sudo sh
 
