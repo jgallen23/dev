@@ -31,6 +31,9 @@ RUN curl https://deb.nodesource.com/setup > /tmp/node && bash /tmp/node && apt-g
 #docker
 RUN curl https://get.docker.com/ > /tmp/docker && bash /tmp/docker
 
+#docker-compose
+RUN curl -L https://github.com/docker/compose/releases/download/1.3.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+
 #utf8
 RUN locale-gen en_US.UTF-8
 ENV LC_ALL en_US.utf-8
