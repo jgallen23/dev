@@ -67,6 +67,9 @@ RUN wget -O- -q http://s3tools.org/repo/deb-all/stable/s3tools.key | sudo apt-ke
 
 EXPOSE 8080
 
+#docker-extras
+RUN curl -sSL https://raw.githubusercontent.com/jgallen23/docker-extras/master/install.sh | sudo bash
+
 #dotfiles
 ADD dotfiles-setup /dotfiles-setup
 
