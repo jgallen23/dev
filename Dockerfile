@@ -41,12 +41,6 @@ ENV LC_ALL en_US.utf-8
 #Timezone
 RUN echo America/Los_Angeles | sudo tee /etc/timezone && sudo dpkg-reconfigure --frontend noninteractive tzdata
 
-#ngrok
-RUN cd /tmp && \
-  wget https://dl.ngrok.com/ngrok_2.0.19_linux_amd64.zip -O ngrok.zip && \
-  unzip ngrok.zip && \
-  mv ngrok /usr/local/bin/
-
 #global node libs
 RUN npm install -g david grunt-cli bower jscs jshint nodemon
 
