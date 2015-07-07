@@ -67,6 +67,9 @@ EXPOSE 8080
 #docker-extras
 RUN curl -sSL https://raw.githubusercontent.com/jgallen23/docker-extras/master/install.sh | sudo bash
 
+#git-extras
+RUN curl -sSL http://git.io/git-extras-setup | sudo bash /dev/stdin
+
 #dotfiles
 ADD dotfiles-setup /dotfiles-setup
 
