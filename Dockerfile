@@ -42,7 +42,7 @@ ENV LC_ALL en_US.utf-8
 RUN echo America/Los_Angeles | sudo tee /etc/timezone && sudo dpkg-reconfigure --frontend noninteractive tzdata
 
 #global node libs
-RUN npm install -g david grunt-cli bower jscs jshint nodemon aws-cli-utils
+RUN npm install -g david grunt-cli bower jscs jshint nodemon aws-cli-utils up
 
 #update npm
 RUN npm update -g npm
