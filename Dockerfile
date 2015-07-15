@@ -65,6 +65,7 @@ RUN wget -O- -q http://s3tools.org/repo/deb-all/stable/s3tools.key | sudo apt-ke
 EXPOSE 8080
 
 #docker-extras
+ENV DOCKER_EXTRAS_VER "0.0.8"
 RUN curl -sSL https://raw.githubusercontent.com/jgallen23/docker-extras/master/install.sh | sudo bash
 
 #git-extras
