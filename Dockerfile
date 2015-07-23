@@ -56,6 +56,10 @@ RUN mkdir /tmp/mon && cd /tmp/mon && curl -L# https://github.com/visionmedia/mon
 #mongroup
 RUN mkdir /tmp/mongroup && cd /tmp/mongroup && curl -L# https://github.com/jgallen23/mongroup/archive/master.tar.gz | tar zx --strip 1 && make install
 
+#m
+ENV M_VER "0.0.1"
+RUN mkdir /tmp/m && cd /tmp/m && curl -L# https://github.com/jgallen23/m/archive/master.tar.gz | tar zx --strip 1 && make install
+
 #s3cmd
 RUN wget -O- -q http://s3tools.org/repo/deb-all/stable/s3tools.key | sudo apt-key add - && \
   wget -O/etc/apt/sources.list.d/s3tools.list http://s3tools.org/repo/deb-all/stable/s3tools.list && \
