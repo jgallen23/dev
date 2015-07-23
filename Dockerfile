@@ -57,7 +57,7 @@ RUN mkdir /tmp/mon && cd /tmp/mon && curl -L# https://github.com/visionmedia/mon
 RUN mkdir /tmp/mongroup && cd /tmp/mongroup && curl -L# https://github.com/jgallen23/mongroup/archive/master.tar.gz | tar zx --strip 1 && make install
 
 #m
-ENV M_VER "0.0.1"
+ENV M_VER "0.2.0"
 RUN mkdir /tmp/m && cd /tmp/m && curl -L# https://github.com/jgallen23/m/archive/master.tar.gz | tar zx --strip 1 && make install
 
 #s3cmd
