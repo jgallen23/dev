@@ -50,8 +50,8 @@ RUN npm update -g npm
 #aws
 RUN pip install awscli && pip install awsebcli
 
-#mon
-RUN mkdir /tmp/mon && cd /tmp/mon && curl -L# https://github.com/visionmedia/mon/archive/master.tar.gz | tar zx --strip 1 && make install && rm -rf /tmp/mon
+#mon (my fork)
+RUN mkdir /tmp/mon && cd /tmp/mon && curl -L# https://github.com/jgallen23/mon/archive/master.tar.gz | tar zx --strip 1 && make install && rm -rf /tmp/mon
 
 #mongroup
 RUN mkdir /tmp/mongroup && cd /tmp/mongroup && curl -L# https://github.com/jgallen23/mongroup/archive/master.tar.gz | tar zx --strip 1 && make install
