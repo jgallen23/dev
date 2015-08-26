@@ -13,6 +13,8 @@ RUN apt-get update && \
     python \
     make \
     python-pip \
+    fontforge \
+    ttfautohint \
     exuberant-ctags
 
 #VIM
