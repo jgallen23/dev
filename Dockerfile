@@ -34,7 +34,10 @@ RUN curl https://deb.nodesource.com/setup > /tmp/node && bash /tmp/node && apt-g
 RUN curl https://get.docker.com/ > /tmp/docker && bash /tmp/docker
 
 #docker-compose
-RUN curl -L https://github.com/docker/compose/releases/download/1.3.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+RUN curl -L https://github.com/docker/compose/releases/download/1.4.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+
+#docker-machine
+RUN curl -L https://github.com/docker/machine/releases/download/v0.4.0/docker-machine_linux-amd64 > /usr/local/bin/docker-machine && chmod +x /usr/local/bin/docker-machine
 
 #utf8
 RUN locale-gen en_US.UTF-8
